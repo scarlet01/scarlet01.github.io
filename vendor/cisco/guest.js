@@ -45,4 +45,8 @@ let jwt;
   }
   );
 
-module.exports = { jwt: jwt,};
+function add(x,y){
+    return x+y;
+};
+
+export {add};
