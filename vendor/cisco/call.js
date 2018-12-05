@@ -1,2 +1,3 @@
-import {jwt} from '../cisco/guest.js';
+import {getjwt} from '../cisco/guest.js';
 document.getElementById('sometag').innerHTML = jwt;
+

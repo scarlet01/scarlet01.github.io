@@ -12,7 +12,7 @@ let jwt;
 //---- Async Fetch() OAuth token for Guest ----//
 //https://stackoverflow.com/questions/29775797/fetch-post-json-data
 
-(async () => {
+async function getjwt() => {
 
     console.log("async JWT and COT retrival func started...");
     const rawResponse = await fetch(jot_url, {
@@ -44,12 +44,11 @@ let jwt;
     //console.log ("Recieved COT - " + JSON.stringify(cot.token));
     //connect();
     return jwt;
-  }
-  );
+  };
 /*
 function add(x,y){
     return x+y;
 };
 */
 
-export {jwt};
+export {getjwt};
