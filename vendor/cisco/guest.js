@@ -33,4 +33,5 @@ function add(x,y){
 };
 */
 
-export {getjwt};
+//export {getjwt};
+module.exports.getjwt = getjwt;
