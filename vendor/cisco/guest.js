@@ -1,9 +1,7 @@
-//Use these URLs for easy guestoken access
-const jot_url = 'https://v0wh322qyf.execute-api.us-east-1.amazonaws.com/latest/jot';
+
 //const cot_url = 'https://v0wh322qyf.execute-api.us-east-1.amazonaws.com/latest/cot';
 
-//Declare a random 5 charater websession id
-const web_session = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+
 //document.getElementById("session_id").innerHTML = web_session;
 
 // Declare some globals that we'll need throughout
@@ -14,7 +12,13 @@ const web_session = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0,
 
 export async function getjwt() {
 
-    console.log("async JWT and COT retrival func started...");
+    //Use these URLs for easy guestoken access
+    const jot_url = 'https://v0wh322qyf.execute-api.us-east-1.amazonaws.com/latest/jot';
+
+    //Declare a random 5 charater websession id
+    const web_session = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+
+    console.log("async JWT retrival func started...");
     const rawResponse = await fetch(jot_url, {
       method: 'POST',
       headers: {

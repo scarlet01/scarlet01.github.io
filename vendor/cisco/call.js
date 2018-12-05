@@ -1,4 +1,6 @@
 import {getjwt} from '../cisco/guest.js';
 //var jwt = require ('../cisco/guest.js').getjwt;
-document.getElementById('sometag').innerHTML = getjwt();
+let jwt = getjwt();
+console.log jwt;
+document.getElementById('sometag').innerHTML = jwt;
 
