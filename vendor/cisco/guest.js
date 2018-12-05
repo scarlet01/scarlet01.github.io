@@ -23,8 +23,9 @@ export async function getjwt() {
       },
       body: JSON.stringify({name: 'WebUser_'+web_session, email: 'sample@sample.com'})
     });
-    let jwt = await rawResponse.json();
-    return jwt;
+    //let jwt = await rawResponse.json();
+    //return jwt;
+    return await rawResponse.json();
 };
 
 /*
