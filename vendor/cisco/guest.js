@@ -25,6 +25,7 @@ let jwt;
     });
     jwt = await rawResponse.json();
   
+    /*
     const raw_cot_Response = await fetch(cot_url, {
       method: 'POST',
       headers: {
@@ -33,7 +34,8 @@ let jwt;
       },
       body: JSON.stringify({jwt: jwt})
     });
-    //cot = await raw_cot_Response.json();
+    cot = await raw_cot_Response.json();
+    */
   })()
   .then(
     //alert("got cot")
