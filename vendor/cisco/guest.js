@@ -12,7 +12,7 @@ const web_session = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0,
 //---- Async Fetch() OAuth token for Guest ----//
 //https://stackoverflow.com/questions/29775797/fetch-post-json-data
 
-async function getjwt() {
+export async function getjwt() {
 
     console.log("async JWT and COT retrival func started...");
     const rawResponse = await fetch(jot_url, {
@@ -34,4 +34,4 @@ function add(x,y){
 */
 
 //export {getjwt};
-module.exports.getjwt = getjwt;
+//module.exports.getjwt = getjwt;
