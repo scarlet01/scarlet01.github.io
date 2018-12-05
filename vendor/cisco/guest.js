@@ -7,12 +7,12 @@ const web_session = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0,
 //document.getElementById("session_id").innerHTML = web_session;
 
 // Declare some globals that we'll need throughout
-let jwt;
+//let jwt;
 
 //---- Async Fetch() OAuth token for Guest ----//
 //https://stackoverflow.com/questions/29775797/fetch-post-json-data
 
-async function getjwt() => {
+async function getjwt() {
 
     console.log("async JWT and COT retrival func started...");
     const rawResponse = await fetch(jot_url, {
@@ -23,28 +23,10 @@ async function getjwt() => {
       },
       body: JSON.stringify({name: 'WebUser_'+web_session, email: 'sample@sample.com'})
     });
-    jwt = await rawResponse.json();
-  
-    /*
-    const raw_cot_Response = await fetch(cot_url, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({jwt: jwt})
-    });
-    cot = await raw_cot_Response.json();
-    */
-  })()
-  .then(
-    //alert("got cot")
-    () => {
-    console.log ("Recieved JOT - " + JSON.stringify(jwt));
-    //console.log ("Recieved COT - " + JSON.stringify(cot.token));
-    //connect();
+    let jwt = await rawResponse.json();
     return jwt;
-  };
+};
+
 /*
 function add(x,y){
     return x+y;
